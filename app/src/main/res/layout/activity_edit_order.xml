@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EditOrderActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Edit your order (we didn't start it yet)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#424242"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your name:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:labelFor="@id/edit_text_name"
+        />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hummus?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:labelFor="@id/checkbox_hummus"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_hummus"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tahini?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:labelFor="@id/checkbox_tahini"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_tahini"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pickles?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:labelFor="@id/btn_pickles_up"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_pickles_up"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_up" />
+
+        <TextView
+            android:id="@+id/txt_pickles_count"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btn_pickles_down"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_down" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Comments for the order:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:labelFor="@id/edit_text_comment"
+        />
+
+    <EditText
+        android:id="@+id/edit_text_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:lines="1"
+        />
+    <!--    Placeholder (to align button to bottom) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:clickable="false"
+        android:visibility="invisible"
+        />
+    <!--    Placeholder -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <Button
+        android:id="@+id/btn_place_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Order"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        />
+    <Button
+        android:id="@+id/btn_delete_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete order"
+        android:backgroundTint="#F44336"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        />
+    </LinearLayout>
+</LinearLayout>

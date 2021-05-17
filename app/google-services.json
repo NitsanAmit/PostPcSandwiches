@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "852569173975",
+    "project_id": "postpcsandwiches",
+    "storage_bucket": "postpcsandwiches.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852569173975:android:daa2456a6490972458a592",
+        "android_client_info": {
+          "package_name": "com.namit.postpcsandwiches"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852569173975-jf0t08lbphaobj6mauh0vrnejkvhl7mc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUwpsV2gtE0oFK26O05wjyhmpHnS5V8Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852569173975-jf0t08lbphaobj6mauh0vrnejkvhl7mc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
