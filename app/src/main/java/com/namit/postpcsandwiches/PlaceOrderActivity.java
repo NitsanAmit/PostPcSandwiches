@@ -1,7 +1,5 @@
 package com.namit.postpcsandwiches;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,10 +11,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.namit.postpcsandwiches.base.components.SandwichesActivity;
+import com.namit.postpcsandwiches.base.components.SandwichesApp;
+import com.namit.postpcsandwiches.base.models.Order;
 
-import com.namit.postpcsandwiches.models.Order;
-
-public class PlaceOrderActivity extends AppCompatActivity {
+public class PlaceOrderActivity extends SandwichesActivity {
 
     EditText customerName;
     EditText customerComment;

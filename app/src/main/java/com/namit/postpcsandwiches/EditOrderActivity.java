@@ -1,7 +1,6 @@
 package com.namit.postpcsandwiches;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,11 +11,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.firestore.ListenerRegistration;
-import com.namit.postpcsandwiches.models.Order;
+import com.namit.postpcsandwiches.base.components.SandwichesActivity;
+import com.namit.postpcsandwiches.base.components.SandwichesApp;
+import com.namit.postpcsandwiches.base.models.Order;
+import com.namit.postpcsandwiches.base.models.OrderStatus;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class EditOrderActivity extends AppCompatActivity {
+public class EditOrderActivity extends SandwichesActivity {
 
     private EditText customerName;
     private EditText customerComment;
@@ -46,11 +49,13 @@ public class EditOrderActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
-            return; //TODO not good
+            toastError("Error finding order");
+            return;
         }
         originalOrder = (Order) extras.getSerializable("order");
         if (originalOrder == null) {
-            return; //TODO also not good
+            toastError("Error finding order");
+            return;
         }
         orderDraft = new Order(originalOrder);
 

@@ -1,17 +1,16 @@
 package com.namit.postpcsandwiches;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
+import com.namit.postpcsandwiches.base.components.SandwichesActivity;
+import com.namit.postpcsandwiches.base.components.SandwichesApp;
+import com.namit.postpcsandwiches.base.models.Order;
+import com.namit.postpcsandwiches.base.models.OrderStatus;
 
-import com.namit.postpcsandwiches.models.Order;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends SandwichesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .addOnFailureListener(err -> {
-                    Log.e(getClass().getSimpleName(), "Error in fetching data", err); //TODO remove
+                    toastError("Error in fetching data: " + err);
                     startPlaceOrderActivity();
                 });
     }

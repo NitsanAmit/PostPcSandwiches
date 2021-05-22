@@ -1,4 +1,4 @@
-package com.namit.postpcsandwiches;
+package com.namit.postpcsandwiches.base.models;
 
 public enum OrderStatus {
     WAITING,

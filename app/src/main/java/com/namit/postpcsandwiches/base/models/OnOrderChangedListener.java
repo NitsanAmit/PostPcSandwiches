@@ -1,4 +1,4 @@
-package com.namit.postpcsandwiches.models;
+package com.namit.postpcsandwiches.base.models;
 
 @FunctionalInterface
 public interface OnOrderChangedListener {

@@ -1,15 +1,15 @@
 package com.namit.postpcsandwiches;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import com.google.firebase.firestore.ListenerRegistration;
-import com.namit.postpcsandwiches.models.Order;
+import com.namit.postpcsandwiches.base.components.SandwichesActivity;
+import com.namit.postpcsandwiches.base.components.SandwichesApp;
+import com.namit.postpcsandwiches.base.models.Order;
+import com.namit.postpcsandwiches.base.models.OrderStatus;
 
-public class ReviewOrderActivity extends AppCompatActivity {
+public class ReviewOrderActivity extends SandwichesActivity {
 
     private ListenerRegistration statusListener;
 
@@ -20,11 +20,13 @@ public class ReviewOrderActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
-            return; //TODO not good
+            toastError("Error finding order");
+            return;
         }
         Order order = (Order) extras.getSerializable("order");
         if (order == null) {
-            return; //TODO also not good
+            toastError("Error finding order");
+            return;
         }
 
         ((TextView) findViewById(R.id.txt_order_id)).setText(String.format("Order #: %s", order.getId()));

@@ -1,6 +1,5 @@
-package com.namit.postpcsandwiches.models;
+package com.namit.postpcsandwiches.base.models;
 
-import com.namit.postpcsandwiches.OrderStatus;
 import java.io.Serializable;
 import java.util.UUID;
 
